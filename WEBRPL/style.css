@@ -1,0 +1,154 @@
+/* Kontainer Header dan Sidebar */
+.header-aside-container {
+    display: flex;
+    align-items: stretch; /* Menyelaraskan tinggi elemen */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Sidebar */
+aside {
+    flex: 1; /* Sidebar lebih kecil */
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    height: 300px; /* Tinggi disesuaikan dengan header */
+    overflow-y: auto; /* Scroll jika konten lebih besar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus pada sidebar */
+}
+
+.sidebar-image {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+/* Header */
+header {
+    flex: 3; /* Header lebih lebar dari aside */
+    height: 300px; /* Tinggi tetap */
+    border-radius: 10px; /* Sudut melengkung pada header */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus pada header */
+}
+
+.header-image {
+    width: 100%;
+    max-width: 730px;
+    height: 300px;
+    object-fit: fill; /* Menyesuaikan gambar tanpa distorsi */
+    border-radius: 10px; /* Sudut melengkung pada gambar */
+    display: block;
+}
+
+/* Gaya Navbar */
+nav {
+    background-color: #004085;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    color: white;
+    padding: 15px 30px;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase; /* Menambahkan huruf kapital */
+}
+
+nav ul li a:hover {
+    background-color: #002752;
+}
+
+/* Layout kontainer utama */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Sidebar */
+aside {
+    width: 25%;
+    background-color: #e0e0e0;
+    padding: 15px;
+    margin-right: 20px;
+}
+
+aside h3 {
+    text-align: center;
+    color: #004085;
+    font-size: 1.2em;
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin: 10px 0;
+}
+
+aside ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+aside ul li a:hover {
+    color: #004085;
+}
+
+/* Konten utama */
+.content {
+    width: 75%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus pada konten */
+}
+
+.content h2 {
+    color: #004085;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.gallery {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 30%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    object-fit: cover; /* Agar gambar dalam galeri terlihat rapi */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan halus pada gambar */
+}
+
+/* Gaya footer */
+footer {
+    background-color: #004085;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-radius: 10px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Mahasiswa</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            height: 100px;
+            background-color: #ffffff;
+            color: red;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .header img {
+            width: 80px;
+            height: 80px;
+            vertical-align: middle;
+        }
+        .content {
+            display: flex;
+            height: calc(100vh - 100px);
+        }
+        .sidebar {
+            width: 20%;
+            background-color: #f5f5f5;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar h3 {
+            margin-top: 0;
+            color: purple;
+        }
+        .sidebar a {
+            color: purple;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+        .main {
+            flex-grow: 1;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-y: auto;
+            background-color: #ffffff;
+            border-left: 1px solid #ddd;
+        }
+        .student-detail img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 10px;
+        }
+        .student-detail h2 {
+            color: #004080;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="plbg.png" alt="Logo Universitas">
+        Kuliahku Terbaik Bagiku!
+        <img src="rpl.png" alt="Logo Engineering">
+    </div>  
+    <div class="content">
+        <div class="sidebar">
+            <h3>List Nama Mahasiswa:</h3>
+            <a href="detail.html?student=agung" target="main-frame">agung</a>
+            <a href="detail.html?student=vincent satoru" target="main-frame">vincent</a>
+            <a href="detail.html?student=andi" target="main-frame">Andi</a>
+        </div>
+        <iframe name="main-frame" class="main" src="detail.html" frameborder="0"></iframe>
+    </div>
+</body>
+</html>

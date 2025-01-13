@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Mahasiswa</title>
+    <style>
+        .student-detail {
+            text-align: left;
+            margin: 20px;
+            max-width: 500px;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .student-detail img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .student-detail h2 {
+            font-weight: bold;
+            color: #333;
+        }
+        .student-detail p, .student-detail ul {
+            font-size: 1em;
+            padding-left: 10px;
+        }
+        .student-detail a {
+            color: blue;
+            text-decoration: none;
+        }
+        .student-detail a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="student-detail" id="student-detail">
+    </div>
+
+    <script>
+        const students = {
+            "vincent satoru": {
+                img: "vin.jpg",
+                name: "vincent satoru",
+                address: "Kebak Kramat",
+                email: "aww@vincent.com",
+                description: "Aku adalah anak yang baik hati dan suka menolong.",
+                hobbies: ["Menyanyi", "Menari", "Berjoged"],
+                skills: ["Manjat Pohon"]
+            },
+            "andi": {
+                img: "foto-mahasiswa2.png",
+                name: "Andi",
+                address: "Jakarta",
+                email: "andi@taktahu.com",
+                description: "Mahasiswa yang gemar membaca dan menulis.",
+                hobbies: ["Membaca", "Menulis", "Berjalan-jalan"],
+                skills: ["Penulis Konten", "Pemrogram Java"]
+            },
+            "agung": {
+                img: "foto-mahasiswa3.png",
+                name: "Agung",
+                address: "Bandung",
+                email: "siti@taktahu.com",
+                description: "Mahasiswa yang rajin belajar dan aktif di organisasi kampus.",
+                hobbies: ["Bersepeda", "Melukis", "Berkebun"],
+                skills: ["Desain UI/UX", "Pemrogram Python"]
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const studentId = urlParams.get("student");
+        if (studentId && students[studentId]) {
+            const student = students[studentId];
+            document.getElementById("student-detail").innerHTML = `
+                <img src="${student.img}" alt="Foto Mahasiswa">
+                <h2>Nama: ${student.name}</h2>
+                <p>Alamat: ${student.address}</p>
+                <p>Email: <a href="mailto:${student.email}">${student.email}</a></p>
+                <p>Deskripsi: ${student.description}</p>
+                <h3>Hobi:</h3>
+                <ul>${student.hobbies.map(hobby => `<li>${hobby}</li>`).join('')}</ul>
+                <h3>Keahlian:</h3>
+                <ul>${student.skills.map(skill => `<li>${skill}</li>`).join('')}</ul>
+            `;
+        } else {
+            document.getElementById("student-detail").innerHTML = "<p>Data mahasiswa tidak ditemukan.</p>";
+        }
+    </script>
+</body>
+</html>
